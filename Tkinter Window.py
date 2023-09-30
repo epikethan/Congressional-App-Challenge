@@ -1,8 +1,13 @@
 import time 
 import tkinter as tk 
 from tkinter import Entry, messagebox
+from pygame import mixer
 
 root = tk.Tk()
+
+mixer.init()
+mixer.music.load(r"C:\Users\hende\OneDrive\Desktop\Ethan's Congressional App Challenge\simple-short-call-loop-153308.mp3")
+mixer.music.set_volume(2.5)
 
 root.wm_title("Window")
 root.geometry("500x500")
@@ -53,7 +58,8 @@ def submit():
         # when temp value = 0; then a messagebox pop's up
         # with a message:"Time's up"
         if (temp == 0):
-            messagebox.showinfo("Time Countdown", "Time's up ")
+            mixer.music.play()
+            messagebox.showinfo("Time Countdown", "Time's up ")          
         temp -= 1
 #start timer button
 StartTimer = tk.Button(root, text="Start Timer", font=("Times",20), bd='5',command = submit)
