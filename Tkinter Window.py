@@ -1,12 +1,16 @@
+#https://www.youtube.com/watch?v=3tPFV1-prQ8
+
 import time 
 import tkinter as tk 
 from tkinter import Entry, messagebox
 from pygame import mixer
 
+host_path = 'C:\Windows\System32\drivers\etc\hosts'
+ip_address = '24.234.219.188'
 root = tk.Tk()
 
 mixer.init()
-mixer.music.load(r"C:\Users\hende\OneDrive\Desktop\Ethan's Congressional App Challenge\simple-short-call-loop-153308.mp3")
+mixer.music.load(r"C:\Users\TCS\Downloads\simple-short-call-loop-153308.mp3")
 mixer.music.set_volume(2.5)
 
 root.wm_title("Window")
@@ -22,15 +26,18 @@ second.set("00")
 # title in window
 Welcome = tk.Label(root, text="Welcome to your Personal Work Timer", font=("Times",20))
 Welcome.pack()
+#textbox for websites to block
+blockEntry= Entry(root, width=11, font=("Times",30,""), bd='5')
+blockEntry.place(x=140,y=100)
 # boxes for hour, minute, seconds
 hourEntry= Entry(root, width=3, font=("Times",30,""), bd='5', textvariable=hour)
-hourEntry.place(x=140,y=175)
+hourEntry.place(x=140,y=275)
   
 minuteEntry= Entry(root, width=3, font=("Times",30,""), bd='5', textvariable=minute)
-minuteEntry.place(x=220,y=175)
+minuteEntry.place(x=220,y=275)
 
 secondEntry= Entry(root, width=3, font=("Times",30,""), bd='5', textvariable=second)
-secondEntry.place(x=300,y=175)
+secondEntry.place(x=300,y=275)
 
 def submit():
     try:
@@ -63,6 +70,6 @@ def submit():
         temp -= 1
 #start timer button
 StartTimer = tk.Button(root, text="Start Timer", font=("Times",20), bd='5',command = submit)
-StartTimer.place(x=180,y=275)
+StartTimer.place(x=180,y=375)
 
 root.mainloop()
