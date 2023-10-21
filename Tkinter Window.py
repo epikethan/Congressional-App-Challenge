@@ -1,11 +1,9 @@
-https://www.youtube.com/watch?v=LSYik8407Xo
-
 import time 
 import tkinter as tk 
 from tkinter import Entry, messagebox
 from pygame import mixer
 
-host_path = 'C:\Windows\System32\drivers\etc\hosts'
+host_path = r"C:\Users\lasve\Desktop\esting.txt"
 ip_address = '24.234.219.188'
 website_list = ["myspace.com"]
 root = tk.Tk()
@@ -66,15 +64,22 @@ def submit():
                 if website in content:
                     pass
                 else:
-                    file.write(redirect+" "+websites+"\n") 
+                    file.write(ip_address+" "+ website +"\n") 
 
         time.sleep(1)
         # when temp value = 0; then a messagebox pop's up
         # with a message:"Time's up"
         if (temp == 0):
             mixer.music.play()
-            messagebox.showinfo("Time Countdown", "Time's up ")   
-
+            messagebox.showinfo("Time Countdown", "Time's up ") 
+            with open(host_path, "r+") as filedata:
+                file_lines = file.readlines()
+                for line in file_lines:
+                    for website in website_list:
+                        if website in line:
+                            filedata.write(line)
+                        else:
+                            pass
         temp -= 1
 #start timer button
 StartTimer = tk.Button(root, text="Start Timer", font=("Times",20), bd='5',command = submit)
