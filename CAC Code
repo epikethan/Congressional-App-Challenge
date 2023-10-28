@@ -9,11 +9,10 @@ website_list = ["myspace.com"]
 root = tk.Tk()
 
 mixer.init()
-mixer.music.load(r"C:\Users\ethan\OneDrive\Desktop\Ethan's Congressional App Challenge\alarm_beep-clock-165474.mp3"
-)
+mixer.music.load(r"C:\Users\ethan\OneDrive\Desktop\Ethan's Congressional App Challenge\alarm_beep-clock-165474.mp3")
 mixer.music.set_volume(2.5)
 
-root.wm_title("Window")
+root.wm_title("MEW")
 root.geometry("500x500")
 
 hour = tk.StringVar()
