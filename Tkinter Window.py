@@ -24,7 +24,7 @@ hour.set("00")
 minute.set("00")
 second.set("00")
 # title in window
-Welcome = tk.Label(root,text="Welcome to your Personal Work Timer",font=("Times", 20))
+Welcome = tk.Label(root,text="M E W, More Efficient Working",font=("Times", 20))
 Welcome.pack()
 # boxes for hour, minute, seconds
 hourEntry = Entry(root,width=3,font=("Times", 30, ""),bd='5',textvariable=hour)
