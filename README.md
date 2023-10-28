@@ -1,10 +1,3 @@
-  __  __ ________          __
- |  \/  |  ____\ \        / /
- | \  / | |__   \ \  /\  / / 
- | |\/| |  __|   \ \/  \/ /  
- | |  | | |____   \  /\  /   
- |_|  |_|______|   \/  \/    
- 
 MEW, More Efficient Work
 
 This is basically a website blocker
@@ -27,7 +20,18 @@ To download the sound file go to this link and click download on the right hand 
 https://pixabay.com/sound-effects/alarm-beep-clock-165474/                  
 
 Then go to files, downloads, and then right click the sound file.                  
-Then click, "Copy as Path" and paste it into the line                  
+Then click, "Copy as Path" and paste it into line 12 between the quotation marks.
 
+Finally, go back to line 8.                  
+Put the websites you would like to block by typing their address into the list.
+For example, if I wanted to block Youtube and Facebook, I would type into the list "youtube.com" and "facebook.com", making line 12 look like:               
+
+website_list = ["youtube.com, facebook.com"]
+
+Once you have set these up, you can now run the program.
+
+Then input time into the text boxes, in the format " hours minutes seconds " and you are then able to start your timer.                  
+Make sure to have your browser closed when you start the timer as if it currently open, this app will not work.                  
+And once the timer ends, click ok on the popup window, close your browser and reopen it.
 
 
