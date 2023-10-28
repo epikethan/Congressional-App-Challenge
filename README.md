@@ -28,7 +28,6 @@ https://pixabay.com/sound-effects/alarm-beep-clock-165474/
                        Λ Λ Λ
 and click download on the right hand side.
 Then go to files, downloads, and then right click the sound file.
-Then click, "Copy as Path"
-
+Then click, "Copy as Path" and paste it into the line
 
 
