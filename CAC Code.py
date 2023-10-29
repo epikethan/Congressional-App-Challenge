@@ -9,10 +9,11 @@ website_list = ["myspace.com"]
 root = tk.Tk()
 
 mixer.init()
-mixer.music.load(r"C:\Users\ethan\OneDrive\Desktop\Ethan's Congressional App Challenge\alarm_beep-clock-165474.mp3")
+mixer.music.load(r"C:\Users\ethan\OneDrive\Desktop\Ethan's Congressional App Challenge\alarm_beep-clock-165474.mp3"
+)
 mixer.music.set_volume(2.5)
 
-root.wm_title("MEW")
+root.wm_title("Window")
 root.geometry("500x500")
 
 hour = tk.StringVar()
@@ -23,17 +24,17 @@ hour.set("00")
 minute.set("00")
 second.set("00")
 # title in window
-Welcome = tk.Label(root,text="M E W, More Efficient Working",font=("Times", 20))
+Welcome = tk.Label(root,text="Welcome to your Personal Work Timer",font=("Times", 20))
 Welcome.pack()
 # boxes for hour, minute, seconds
 hourEntry = Entry(root,width=3,font=("Times", 30, ""),bd='5',textvariable=hour)
-hourEntry.place(x=140, y=275)
+hourEntry.place(x=140, y=175)
 
 minuteEntry = Entry(root,width=3,font=("Times", 30, ""),bd='5',textvariable=minute)
-minuteEntry.place(x=220, y=275)
+minuteEntry.place(x=220, y=175)
 
 secondEntry = Entry(root,width=3,font=("Times", 30, ""),bd='5',textvariable=second)
-secondEntry.place(x=300, y=275)
+secondEntry.place(x=300, y=175)
 
 
 def submit():
@@ -85,6 +86,6 @@ def submit():
 
 #start timer button
 StartTimer = tk.Button(root,text="Start Timer",font=("Times", 20),bd='5',command=submit)
-StartTimer.place(x=180, y=375)
+StartTimer.place(x=180, y=325)
 
 root.mainloop()
