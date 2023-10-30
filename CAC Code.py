@@ -3,7 +3,7 @@ import tkinter as tk
 from tkinter import Entry, messagebox
 from pygame import mixer
 
-host_path = r"C:\Users\ethan\OneDrive\Desktop\Ethan's Congressional App Challenge\esting.txt"
+host_path = r"C:\Windows\System32\drivers\etc\hosts"
 ip_address = '72.193.127.160'
 website_list = ["youtube.com"]
 root = tk.Tk()
