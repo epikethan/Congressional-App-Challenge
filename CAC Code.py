@@ -3,9 +3,9 @@ import tkinter as tk
 from tkinter import Entry, messagebox
 from pygame import mixer
 
-host_path = r"C:\Windows\System32\drivers\etc\hosts"
+host_path = r"C:\Users\ethan\OneDrive\Desktop\Ethan's Congressional App Challenge\esting.txt"
 ip_address = '72.193.127.160'
-website_list = ["myspace.com"]
+website_list = ["youtube.com"]
 root = tk.Tk()
 
 mixer.init()
@@ -72,16 +72,24 @@ def submit():
     time.sleep(1)
     # when temp value = 0; then a messagebox pop's up
     # with a message:"Time's up"
+    
+    changes = None
+    thing_to_remove = None
+
     if (temp == 0):
         mixer.music.play()
         messagebox.showinfo("Time Countdown", "Time's up ")
         with open(host_path, "r+") as file:
             filedata = file.read()
             file.close()
-        changes = filedata.replace(ip_address + website, " Unblocked!")
-        with open(host_path, "r+") as file:
-            file.write(changes)
-            file.close()
+            for website in website_list:
+              thing_to_remove = (ip_address + " " + website)
+              text_to_replace = ("---------------------------------------------")
+              changes = filedata.replace(thing_to_remove, text_to_replace)
+              with open(host_path, "r+") as file:
+                file.write(changes)
+                file.close()
+        print(changes)
     temp -= 1
 
 #start timer button
