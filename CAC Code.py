@@ -4,8 +4,8 @@ from tkinter import Entry, messagebox
 from pygame import mixer
 
 host_path = r"C:\Windows\System32\drivers\etc\hosts"
-ip_address = '72.193.127.160'
-website_list = ["youtube.com"]
+ip_address = ''
+website_list = ["www.youtube.com"] #MAKE SURE TO HAVE WWW. INFRONT OF THE WEBSITE OR THIS WILL NOT WORK
 root = tk.Tk()
 
 mixer.init()
